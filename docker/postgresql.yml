@@ -1,0 +1,10 @@
+version: '2'
+services:
+  postgres-app:
+    image: postgres:10-alpine
+    environment:
+      - POSTGRES_USER=postgres_app
+      - POSTGRES_PASSWORD=postgres_app
+      - POSTGRES_DB=postgres_app
+    ports:
+      - 5429:5432

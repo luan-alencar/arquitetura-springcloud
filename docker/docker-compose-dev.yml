@@ -1,0 +1,6 @@
+version: '2'
+services:
+  postgres-app:
+    extends:
+      service: postgres-app
+      file: postgresql.yml
