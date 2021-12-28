@@ -13,7 +13,7 @@ public class FolhaDePagamentoService {
     private final FolhaDePagamentoMapper mapper;
 
     public FolhaDePagamentoDTO getFolhaPagamento(Long funcionarioID, Integer dias) {
-        FolhaDePagamento folhaDePagamento =  new FolhaDePagamento(funcionarioID, "Luan", 23.4, dias);
+        FolhaDePagamento folhaDePagamento = new FolhaDePagamento(funcionarioID, "Luan", 30.0, dias);
         return this.mapper.toDTO(folhaDePagamento);
     }
 }

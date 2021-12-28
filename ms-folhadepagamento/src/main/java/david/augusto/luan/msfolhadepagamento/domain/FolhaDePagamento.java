@@ -19,9 +19,6 @@ public class FolhaDePagamento implements Serializable {
     private Double salarioPorDia;
     private Integer dias;
 
-    public double getTotal() {
-        return this.getDias() * this.getSalarioPorDia();
-    }
 }
 
 

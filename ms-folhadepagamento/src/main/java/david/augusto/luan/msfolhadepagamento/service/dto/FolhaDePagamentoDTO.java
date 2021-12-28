@@ -17,4 +17,8 @@ public class FolhaDePagamentoDTO implements Serializable {
     private String nome;
     private Double salarioPorDia;
     private Integer dias;
+
+    public double getTotal() {
+        return this.getDias() * this.getSalarioPorDia();
+    }
 }
