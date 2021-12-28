@@ -12,6 +12,7 @@
 
     <modules>
         <module>ms-funcionario</module>
+        <module>ms-folhadepagamento</module>
     </modules>
 
     <properties>
