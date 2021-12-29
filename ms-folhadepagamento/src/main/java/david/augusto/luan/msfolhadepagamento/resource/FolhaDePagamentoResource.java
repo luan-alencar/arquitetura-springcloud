@@ -2,7 +2,6 @@ package david.augusto.luan.msfolhadepagamento.resource;
 
 import david.augusto.luan.msfolhadepagamento.service.FolhaDePagamentoService;
 import david.augusto.luan.msfolhadepagamento.service.dto.FolhaDePagamentoDTO;
-import david.augusto.luan.msfolhadepagamento.service.mapper.FolhaDePagamentoMapper;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -16,14 +15,13 @@ import org.springframework.web.bind.annotation.RestController;
 public class FolhaDePagamentoResource {
 
     private final FolhaDePagamentoService service;
-    private final FolhaDePagamentoMapper mapper;
 
-    @GetMapping("/{funcionarioID}/dias/{dias}")
+    @GetMapping("/{id}/dias/{dias}")
     public ResponseEntity<FolhaDePagamentoDTO> getPagamento(
-            @PathVariable("funcionarioID") Long funcionarioID,
+            @PathVariable("id") Long id,
             @PathVariable("dias") Integer dias
     ) {
-        return ResponseEntity.ok(this.service.getFolhaPagamento(funcionarioID, dias));
+        return ResponseEntity.ok(this.service.getFolhaPagamento(id, dias));
     }
 
 }

@@ -2,5 +2,8 @@ spring:
   application:
     name: ms-folhadepagamento
 
+ms-funcionario:
+  host: http://localhost:8001
+
 server:
   port: 8002
